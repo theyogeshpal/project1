@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400">
+  <defs>
+    <linearGradient id="skinGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f4a460;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d2691e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="shirtGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e63946;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="300" height="400" fill="#fef8f3"/>
+  
+  <!-- Head -->
+  <circle cx="150" cy="80" r="35" fill="url(#skinGradient)"/>
+  
+  <!-- Hair -->
+  <path d="M 115 80 Q 115 45 150 45 Q 185 45 185 80 Z" fill="#2c2c2c"/>
+  
+  <!-- Eyes -->
+  <circle cx="140" cy="75" r="4" fill="#000"/>
+  <circle cx="160" cy="75" r="4" fill="#000"/>
+  
+  <!-- Smile -->
+  <path d="M 140 85 Q 150 90 160 85" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round"/>
+  
+  <!-- Body/Arms -->
+  <rect x="110" y="120" width="80" height="100" rx="20" fill="url(#shirtGradient)"/>
+  
+  <!-- Left Arm -->
+  <rect x="80" y="130" width="30" height="60" rx="15" fill="url(#skinGradient)" transform="rotate(-20 95 130)"/>
+  
+  <!-- Right Arm -->
+  <rect x="190" y="130" width="30" height="60" rx="15" fill="url(#skinGradient)" transform="rotate(20 205 130)"/>
+  
+  <!-- Legs -->
+  <rect x="120" y="225" width="25" height="80" rx="12" fill="#333"/>
+  <rect x="155" y="225" width="25" height="80" rx="12" fill="#333"/>
+  
+  <!-- Shoes -->
+  <ellipse cx="132" cy="310" rx="18" ry="12" fill="#1a1a1a"/>
+  <ellipse cx="168" cy="310" rx="18" ry="12" fill="#1a1a1a"/>
+</svg>
