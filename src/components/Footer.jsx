@@ -123,6 +123,22 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Registrations Section */}
+        <div className="border-t border-gray-700 pt-8 pb-8">
+          <p className="text-center text-gray-400 text-sm mb-6 uppercase tracking-widest font-semibold">Registered & Recognized By</p>
+          <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10">
+            <div className="bg-white p-3 rounded-xl shadow-md hover:scale-105 transition-all duration-300 flex items-center justify-center w-32 md:w-40 h-16 md:h-20">
+              <img src="http://www.unnaticonsultancy.com/img/services/msme.jpg" alt="MSME Registered" className="max-h-full max-w-full object-contain" />
+            </div>
+            <div className="bg-white p-3 rounded-xl shadow-md hover:scale-105 transition-all duration-300 flex items-center justify-center w-32 md:w-40 h-16 md:h-20">
+              <img src="https://i0.wp.com/www.numel.in/wp-content/uploads/2021/11/Startup-India-Logo1-02.png?ssl=1" alt="Startup India" className="max-h-full max-w-full object-contain" />
+            </div>
+            <div className="bg-white p-3 rounded-xl shadow-md hover:scale-105 transition-all duration-300 flex items-center justify-center w-32 md:w-40 h-16 md:h-20">
+              <img src="https://c0.uidownload.com/pngpics/2586/447/government-e-marketplace-logo-gem-online-procurement-india-government-marketplace-e-governance-platform-digital-procurement-solutions-public-sector-marketplace-government-agency-branding.png" alt="GeM Registered" className="max-h-full max-w-full object-contain" />
+            </div>
+          </div>
+        </div>
+
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">

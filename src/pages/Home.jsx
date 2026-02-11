@@ -5,7 +5,6 @@ import WhyChooseUs from '../components/WhyChooseUs';
 import TechnologySection from '../components/TechnologySection';
 import OurStory from '../components/OurStory';
 import TrainingPrograms from '../components/TrainingPrograms';
-import RegisterForm from '../components/RegisterForm';
 import FAQSection from '../components/FAQSection';
 import ContactSection from '../components/ContactSection';
 
@@ -19,7 +18,6 @@ const Home = () => {
       <TechnologySection />
       <OurStory />
       <TrainingPrograms />
-      <RegisterForm />
       <FAQSection />
       <ContactSection />
     </div>

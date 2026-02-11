@@ -120,7 +120,7 @@ const FAQSection = () => {
           <p className="text-white/90 text-lg mb-6 max-w-2xl mx-auto">
             Our team is here to help! Get in touch with us and we'll answer all your queries.
           </p>
-          <button className="bg-white text-orange-600 px-8 py-4 rounded-full font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all">
+          <button className="bg-white text-orange-600 px-8 py-4 rounded-full font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all" onClick={() => window.location.href='/contact'}>
             Contact Us Now
           </button>
         </div>

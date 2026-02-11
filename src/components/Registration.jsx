@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { UserPlus, Mail, Phone, BookOpen, Calendar, CheckCircle, ArrowRight, GraduationCap, User, Building2, IndianRupee, Shield } from 'lucide-react';
+import Swal from 'sweetalert2';
 
 const Registration = () => {
   const [formData, setFormData] = useState({
@@ -7,33 +8,38 @@ const Registration = () => {
     qualification: '', year: '', fatherName: '', collegeName: '', 
     registrationFeePaid: false
   });
-  const [isSubmitted, setIsSubmitted] = useState(false);
   const [captchaVerified, setCaptchaVerified] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!captchaVerified) {
-      alert('Please verify you are not a robot');
+      Swal.fire({
+        icon: 'warning',
+        title: 'Verification Required',
+        text: 'Please verify you are not a robot',
+        confirmButtonColor: '#ea580c'
+      });
       return;
     }
     if (formData.registrationFeePaid) {
       console.log('Registration Fee: ₹200');
     }
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({ name: '', email: '', mobile: '', trainingType: '', technology: '', 
-        qualification: '', year: '', fatherName: '', collegeName: '', registrationFeePaid: false });
-      setCaptchaVerified(false);
-    }, 3000);
+    Swal.fire({
+      icon: 'success',
+      title: 'Registration Successful!',
+      text: 'Our team will contact you soon.',
+      confirmButtonColor: '#ea580c'
+    });
+    setFormData({ name: '', email: '', mobile: '', trainingType: '', technology: '', 
+      qualification: '', year: '', fatherName: '', collegeName: '', registrationFeePaid: false });
+    setCaptchaVerified(false);
   };
 
-  const trainingTypes = ['Summer Training', 'Apprenticeship'];
+  const trainingTypes = ['Course'];
   
   const technologies = [
-    'Python', 'Java', 'PHP', 'MERN Stack', 'React', 'Node.js', 'Angular', 
-    'Flutter', 'Android', 'ASP.NET', 'Data Science', 'Machine Learning', 
-    'DevOps', 'UI/UX Design', 'Cybersecurity'
+    'Dot Net Core Full Stack', 'Java Full Stack', 'MERN Stack', 'PHP Laravel', 
+    'Python Full Stack', 'Data Analytics', 'Android App Development', 'Flutter'
   ];
 
   const qualifications = ['B.Tech', 'BCA', 'MCA', 'M.Tech', 'BSc', 'MSc', 'Diploma', 'Other'];
@@ -69,16 +75,7 @@ const Registration = () => {
         </div>
 
         <div className="bg-white rounded-3xl p-8 md:p-12 shadow-2xl border-2 border-gray-100">
-          {isSubmitted ? (
-            <div className="text-center py-12 animate-pulse">
-              <div className="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <CheckCircle className="w-16 h-16 text-green-600" />
-              </div>
-              <h2 className="text-3xl font-bold text-green-600 mb-3">Registration Successful!</h2>
-              <p className="text-gray-600 text-lg">Our team will contact you soon.</p>
-            </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-2 flex items-center gap-2">
                   <UserPlus className="w-4 h-4 text-orange-600" />
@@ -271,7 +268,6 @@ const Registration = () => {
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
             </form>
-          )}
         </div>
 
         <div className="mt-8 text-center text-white">

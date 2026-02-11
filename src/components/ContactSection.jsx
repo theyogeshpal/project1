@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Send, Facebook, Twitter, Instagram, Linkedin, Youtube, CheckCircle, Zap, Award, HeadphonesIcon, TrendingUp } from 'lucide-react';
+import Swal from 'sweetalert2';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -9,7 +10,6 @@ const ContactSection = () => {
     course: '',
     message: ''
   });
-  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -17,11 +17,13 @@ const ContactSection = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({ name: '', email: '', phone: '', course: '', message: '' });
-    }, 3000);
+    Swal.fire({
+      icon: 'success',
+      title: 'Message Sent!',
+      text: "We'll get back to you within 24 hours.",
+      confirmButtonColor: '#ea580c'
+    });
+    setFormData({ name: '', email: '', phone: '', course: '', message: '' });
   };
 
   const contactInfo = [
@@ -49,15 +51,14 @@ const ContactSection = () => {
   ];
 
   const courses = [
-    'Summer Training',
-    'Winter Training',
-    'Full Stack Development',
-    'Data Science',
-    'Mobile App Development',
-    'DevOps Engineering',
-    'UI/UX Design',
-    'Cybersecurity',
-    'Other'
+    'Dot Net Core Full Stack',
+    'Java Full Stack',
+    'MERN Stack',
+    'PHP Laravel',
+    'Python Full Stack',
+    'Data Analytics',
+    'Android App Development',
+    'Flutter'
   ];
 
   return (
@@ -108,16 +109,7 @@ const ContactSection = () => {
           <div className="bg-white rounded-3xl p-8 shadow-2xl border-2 border-gray-100">
             <h3 className="text-3xl font-bold text-gray-900 mb-6">Send Us a Message</h3>
             
-            {isSubmitted ? (
-              <div className="text-center py-12 animate-pulse">
-                <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="w-12 h-12 text-green-600" />
-                </div>
-                <h4 className="text-2xl font-bold text-green-600 mb-2">Message Sent!</h4>
-                <p className="text-gray-600">We'll get back to you soon.</p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-5">
+            <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="group">
                   <label className="block text-sm font-semibold text-gray-700 mb-2">Full Name *</label>
                   <input
@@ -195,7 +187,6 @@ const ContactSection = () => {
                   Send Message
                 </button>
               </form>
-            )}
 
             {/* Social Media */}
             <div className="border-t border-gray-200 mt-8 pt-6">

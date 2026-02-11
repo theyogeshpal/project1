@@ -14,6 +14,7 @@ const Navbar = () => {
     if (path === '/') setActiveSection('home');
     else if (path === '/courses') setActiveSection('courses');
     else if (path === '/services') setActiveSection('services');
+    else if (path === '/projects') setActiveSection('projects');
     else if (path === '/about') setActiveSection('about');
     else if (path === '/contact') setActiveSection('contact');
   }, [location]);
@@ -35,6 +36,7 @@ const Navbar = () => {
     { href: '/', label: 'Home', id: 'home' },
     { href: '/courses', label: 'Courses', id: 'courses' },
     { href: '/services', label: 'Services', id: 'services' },
+    { href: '/projects', label: 'Projects', id: 'projects' },
     { href: '/about', label: 'About', id: 'about' },
     { href: '/contact', label: 'Contact', id: 'contact' },
   ];
@@ -76,7 +78,7 @@ const Navbar = () => {
                 <Youtube size={16} />
               </a>
             </div>
-            <button className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-3 sm:px-4 py-1.5 rounded-lg text-xs sm:text-sm flex items-center gap-1.5 sm:gap-2 hover:from-orange-600 hover:to-orange-700 hover:shadow-lg hover:scale-105 transition-all">
+            <button className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-3 sm:px-4 py-1.5 rounded-lg text-xs sm:text-sm flex items-center gap-1.5 sm:gap-2 hover:from-orange-600 hover:to-orange-700 hover:shadow-lg hover:scale-105 transition-all" onClick={() => window.location.href='/contact'}>
               <Download size={14} className="sm:w-4 sm:h-4" />
               <span className="hidden sm:inline">Download Brochure</span>
               <span className="sm:hidden">Brochure</span>
@@ -100,7 +102,7 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto px-4 py-2.5">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <img src="/Gemini_Generated_Image_9nq63t9nq63t9nq6-removebg-preview.png" alt="The Code Spark" className="h-11 w-auto object-contain drop-shadow-lg" />
+            <img src="/Gemini_Generated_Image_9nq63t9nq63t9nq6-removebg-preview.png" alt="The Code Spark" className="h-14 w-auto object-contain drop-shadow-lg" />
           </div>
           
           <div className="hidden lg:flex gap-6 items-center">

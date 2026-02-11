@@ -3,68 +3,68 @@ import { BookOpen, Code2, Layers, Smartphone, Award, Users, Clock, TrendingUp } 
 const Courses = () => {
   const courses = [
     { 
-      title: 'Summer Training', 
-      desc: 'Intensive 6-8 weeks program with hands-on projects', 
-      duration: '6-8 Weeks', 
-      students: '200+ Enrolled',
-      technologies: ['Python', 'Java', 'React'],
-      icon: BookOpen 
-    },
-    { 
-      title: 'Winter Training', 
-      desc: 'Comprehensive program focusing on latest technologies', 
-      duration: '6-8 Weeks', 
+      title: 'Dot Net Core Full Stack', 
+      desc: 'Master ASP.NET Core, C#, and modern web development', 
+      duration: '12 Weeks', 
       students: '150+ Enrolled',
-      technologies: ['PHP', 'MySQL', 'JavaScript'],
+      technologies: ['ASP.NET Core', 'C#', 'SQL Server'],
       icon: Code2 
     },
     { 
-      title: 'Full Stack Development', 
-      desc: 'Master MERN stack with deployment and DevOps', 
+      title: 'Java Full Stack', 
+      desc: 'Complete Java development with Spring Boot and Hibernate', 
+      duration: '12 Weeks', 
+      students: '200+ Enrolled',
+      technologies: ['Java', 'Spring Boot', 'MySQL'],
+      icon: Layers 
+    },
+    { 
+      title: 'MERN Stack', 
+      desc: 'Build modern web apps with MongoDB, Express, React, Node.js', 
       duration: '12 Weeks', 
       students: '180+ Enrolled',
       technologies: ['MongoDB', 'React', 'Node.js'],
-      icon: Layers 
+      icon: Code2 
     },
     { 
-      title: 'Data Science Bootcamp', 
-      desc: 'Python, ML, AI and data analytics with real datasets', 
+      title: 'PHP Laravel', 
+      desc: 'Master Laravel framework for robust web applications', 
       duration: '10 Weeks', 
       students: '120+ Enrolled',
-      technologies: ['Python', 'TensorFlow', 'Pandas'],
+      technologies: ['PHP', 'Laravel', 'MySQL'],
       icon: BookOpen 
     },
     { 
-      title: 'Mobile App Development', 
-      desc: 'Build Android and iOS apps with React Native and Flutter', 
-      duration: '8 Weeks', 
-      students: '90+ Enrolled',
-      technologies: ['React Native', 'Flutter', 'Firebase'],
-      icon: Smartphone 
-    },
-    { 
-      title: 'DevOps Engineering', 
-      desc: 'CI/CD, Docker, Kubernetes, AWS and cloud deployment', 
-      duration: '8 Weeks', 
-      students: '80+ Enrolled',
-      technologies: ['Docker', 'Kubernetes', 'AWS'],
-      icon: Code2 
-    },
-    { 
-      title: 'UI/UX Design', 
-      desc: 'Design thinking, Figma, prototyping and user research', 
-      duration: '6 Weeks', 
-      students: '70+ Enrolled',
-      technologies: ['Figma', 'Adobe XD', 'Sketch'],
+      title: 'Python Full Stack', 
+      desc: 'Django, Flask, and modern Python web development', 
+      duration: '12 Weeks', 
+      students: '160+ Enrolled',
+      technologies: ['Python', 'Django', 'PostgreSQL'],
       icon: Layers 
     },
     { 
-      title: 'Cybersecurity Training', 
-      desc: 'Ethical hacking, network security and penetration testing', 
+      title: 'Data Analytics', 
+      desc: 'Master data analysis, visualization, and business intelligence', 
       duration: '10 Weeks', 
-      students: '60+ Enrolled',
-      technologies: ['Kali Linux', 'Metasploit', 'Wireshark'],
-      icon: Code2 
+      students: '140+ Enrolled',
+      technologies: ['Python', 'Pandas', 'Power BI'],
+      icon: BookOpen 
+    },
+    { 
+      title: 'Android App Development', 
+      desc: 'Build native Android apps with Java and Kotlin', 
+      duration: '10 Weeks', 
+      students: '110+ Enrolled',
+      technologies: ['Java', 'Kotlin', 'Android SDK'],
+      icon: Smartphone 
+    },
+    { 
+      title: 'Flutter', 
+      desc: 'Create cross-platform mobile apps with Flutter and Dart', 
+      duration: '10 Weeks', 
+      students: '130+ Enrolled',
+      technologies: ['Flutter', 'Dart', 'Firebase'],
+      icon: Smartphone 
     },
   ];
 

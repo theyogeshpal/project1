@@ -44,10 +44,10 @@ const Hero = () => {
             Industry-focused training with live projects in Python, Java, PHP, MERN, Android & ASP.NET. Build real skills. Get real placement support.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4 w-full sm:w-auto">
-            <a href="#courses" className="bg-gradient-to-r from-orange-500 to-orange-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all text-center">
+            <a href="/courses" className="bg-gradient-to-r from-orange-500 to-orange-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all text-center">
               Explore Courses
             </a>
-            <a href="#register" className="border-2 border-orange-500 text-orange-600 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-orange-50 transition-all text-center">
+            <a href="/register" className="border-2 border-orange-500 text-orange-600 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-orange-50 transition-all text-center">
               Register Now
             </a>
           </div>

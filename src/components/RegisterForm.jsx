@@ -1,5 +1,6 @@
 import { useState, useRef } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
+import Swal from 'sweetalert2';
 
 const RegisterForm = () => {
   const [formData, setFormData] = useState({
@@ -13,17 +14,19 @@ const RegisterForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Execute invisible reCAPTCHA
     recaptchaRef.current.execute();
   };
 
   const onReCAPTCHAChange = (value) => {
     setRecaptchaValue(value);
     if (value) {
-      // Submit form after reCAPTCHA verification
       console.log('Form submitted:', formData, 'reCAPTCHA:', value);
-      alert('Registration successful!');
-      // Reset form
+      Swal.fire({
+        icon: 'success',
+        title: 'Registration Successful!',
+        text: 'Thank you for registering. We will contact you soon.',
+        confirmButtonColor: '#ea580c'
+      });
       setFormData({ name: '', email: '', phone: '', course: '' });
       recaptchaRef.current.reset();
       setRecaptchaValue(null);
@@ -77,11 +80,14 @@ const RegisterForm = () => {
             required
           >
             <option value="">Select Course</option>
-            <option value="python">Python</option>
-            <option value="java">Java</option>
+            <option value="dotnet">Dot Net Core Full Stack</option>
+            <option value="java">Java Full Stack</option>
             <option value="mern">MERN Stack</option>
-            <option value="php">PHP</option>
-            <option value="android">Android</option>
+            <option value="php">PHP Laravel</option>
+            <option value="python">Python Full Stack</option>
+            <option value="data-analytics">Data Analytics</option>
+            <option value="android">Android App Development</option>
+            <option value="flutter">Flutter</option>
           </select>
           
           <div className="hidden">
